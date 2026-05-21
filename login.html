@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MyLMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .login-card {
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            background: white;
+        }
+        #registerForm, #adminRegisterForm { display: none; }
+        .demo-box {
+            background: #e8f0fe;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card login-card p-4">
+                    
+                    <!-- Sign In Form -->
+                    <div id="signinForm">
+                        <h2 class="text-center mb-4">Welcome Back!</h2>
+                        <div class="demo-box mb-3">
+                            <small>🔐 Demo Accounts:</small><br>
+                            <small>👑 Admin: admin@lms.edu.ph / admin123</small><br>
+                            <small>📖 Student: Register first</small>
+                        </div>
+                        <form id="loginFormElement">
+                            <select class="form-select mb-3" id="loginRole">
+                                <option value="student">📖 Student</option>
+                                <option value="admin">👑 Admin</option>
+                            </select>
+                            <input type="email" class="form-control mb-3" id="loginEmail" placeholder="Email" required>
+                            <input type="password" class="form-control mb-3" id="loginPassword" placeholder="Password" required>
+                            <button type="submit" class="btn btn-primary w-100 py-2">Sign In</button>
+                        </form>
+                        <p class="text-center mt-3">
+                            <a href="#" id="showRegister">Create Student Account</a> | 
+                            <a href="#" id="showAdminRegister">Register as Admin</a>
+                        </p>
+                    </div>
+
+                    <!-- Student Register -->
+                    <div id="registerForm">
+                        <h2 class="text-center mb-4">Student Registration</h2>
+                        <form id="registerFormElement">
+                            <input type="text" class="form-control mb-3" id="regName" placeholder="Full Name" required>
+                            <input type="email" class="form-control mb-3" id="regEmail" placeholder="Email" required>
+                            <input type="password" class="form-control mb-3" id="regPassword" placeholder="Password (min 4 chars)" required>
+                            <input type="password" class="form-control mb-3" id="regConfirm" placeholder="Confirm Password" required>
+                            <button type="submit" class="btn btn-success w-100 py-2">Create Account</button>
+                        </form>
+                        <p class="text-center mt-3"><a href="#" id="showSignin">← Back to Login</a></p>
+                    </div>
+
+                    <!-- Admin Register -->
+                    <div id="adminRegisterForm">
+                        <h2 class="text-center mb-4">Admin Registration</h2>
+                        <form id="adminRegisterFormElement">
+                            <input type="text" class="form-control mb-3" id="adminRegName" placeholder="Full Name" required>
+                            <input type="email" class="form-control mb-3" id="adminRegEmail" placeholder="Email" required>
+                            <input type="password" class="form-control mb-3" id="adminRegPassword" placeholder="Password" required>
+                            <input type="password" class="form-control mb-3" id="adminRegSecret" placeholder="Secret Code (PLSP2026)" required>
+                            <button type="submit" class="btn btn-warning w-100 py-2">Register Admin</button>
+                        </form>
+                        <p class="text-center mt-3"><a href="#" id="showSigninFromAdmin">← Back to Login</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

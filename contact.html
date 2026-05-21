@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MyLMS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <style>
+        body { background: #f8f9fa; }
+        .contact-section {
+            background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+            color: white;
+            border-radius: 1.5rem;
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+        }
+        footer {
+            background: #f8f9fa;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">📘 MyLMS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-outline-light ms-2" href="login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="contact-section text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2>We'd love to hear from you!</h2>
+                    <p class="lead">Whether you have a question about enrollment, courses, or anything else, our team is ready to answer.</p>
+                    <div class="mt-4">
+                        <p><i class="bi bi-geo-alt-fill me-2"></i> <strong>Address:</strong> LMS Building, San Pablo City, Laguna, Philippines</p>
+                        <p><i class="bi bi-envelope-fill me-2"></i> <strong>Email:</strong> <a href="mailto:support@mylms.edu.ph" class="text-white">support@mylms.edu.ph</a></p>
+                        <p><i class="bi bi-telephone-fill me-2"></i> <strong>Phone:</strong> (049) 123-4567</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0 text-center">
+                    <i class="bi bi-chat-dots display-1"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-body p-4">
+                        <h3 class="mb-4">Send us a message</h3>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" id="contactName" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" id="contactEmail" placeholder="Email address" required>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" id="contactMessage" rows="5" placeholder="Your message..." required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg rounded-pill"><i class="bi bi-send"></i> Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Message Sent!</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <i class="bi bi-check-circle display-1 text-success"></i>
+            <p class="mt-2">We will get back to you soon. Thank you!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p class="text-muted mb-0">&copy; 2026 MyLMS. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
